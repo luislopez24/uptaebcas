@@ -1,0 +1,92 @@
+
+/*ESTILO PARA EL LOGIN*/
+	#login{
+		margin-top: 100px;
+		width: 400px;
+		background: rgba(0, 0, 0, .6);
+		box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	
+
+	.login label{
+		font-size: 16px;
+		color: #ccc;
+	}
+
+	.input{
+		font-size: 20px !important;
+		color: white;
+	}
+
+/*ESTILOS PARA LAS PAGINAS*/
+	
+	font{
+		padding-left: 10px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	.collection{
+		margin: 0px;
+	}
+	
+	.collection-item{
+		margin: 100px;
+	}
+
+	footer{
+		margin-top: 10px;
+		position: center;
+		left: 0;
+		bottom: 0;
+	
+	}
+
+	main{
+
+    	padding-left: 200px; }
+
+	header, footer, main{
+    	padding-left: 300px;}
+
+
+	/*DISEÑO CUANDO LA PANTALLA SEA REDUCIDA*/
+	@media only screen and (max-width : 992px) {
+    	header, main{
+        	padding-left: 0;
+    					   }
+    					}
+    @media only screen and (max-width : 992px) {
+   		 footer{
+        	padding-left: 0;
+        	height: 110px !important;
+   			   }
+												}
+
+	/*CONFIGURACION DEL DROPDOWN A GUSTO DEL DISEÑADOR Y NO DE MATERIALIZE*/
+	.dropdown-content {
+ 			 background-color: #fff;
+  			 margin: 0;
+  			 width: 150px !important;
+  			 display: none;
+  			 min-width: 100px;
+  			 overflow-y: auto;
+  			 opacity: 0;
+  			 position: absolute;
+  			 left: 5px;
+ 			 top: -55px;
+  			 z-index: 9999;
+  			 -webkit-transform-origin: 0 0;
+             transform-origin: 0 0;
+         }
+
+	.dropdown-content li {
+  			 clear: both;
+   			 cursor: pointer;
+  			 min-height: 50px;
+  		     line-height: 1.5rem;
+  		     width: 100%;
+  			 text-align: left;
+		}
+
+

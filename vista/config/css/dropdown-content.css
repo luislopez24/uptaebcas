@@ -1,0 +1,9 @@
+
+    ul.select-dropdown,
+      ul.dropdown-content {
+        width: auto !important;
+
+        li > span {
+          white-space: nowrap;
+        }
+      }

@@ -1,0 +1,28 @@
+@font-face{
+	font-family:'Cookie';
+	src:url('../fonts/Cookie.ttf');
+		
+}
+
+@font-face{
+	font-family:'Corbel-negro';
+	src:url('../fonts/Corbelb.ttf');
+		
+}
+
+@font-face{
+	font-family:'Corbel';
+	src:url('../fonts/Corbel.ttf');
+		
+}
+
+@font-face{
+	font-family:'titulo';
+	src:url('../fonts/segoeuil.ttf');
+		
+}
+
+
+h1{
+	font-family:'Cookie';
+}

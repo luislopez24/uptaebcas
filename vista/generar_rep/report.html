@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- ============================================================== -->
+  <!--               IMPORTACION DE CABECERA PRINCIPAL                -->
+  <!-- ============================================================== -->
+  <?php require_once 'vista/publico/Head.php'; ?>
+</head>
+
+<body>
+
+  <!-- ============================================================== -->
+  <!--            IMPORTACION DE LA BARRA DE NAVEGACION               -->
+  <!-- ============================================================== -->
+  <?php require_once 'vista/publico/Header.php'; 
+  require_once 'vista/config/js/alertas.php';?>
+
+  <!-- ============================================================== -->
+  <!-- INICIO DEL CONTENIDO-->
+  <!-- ============================================================== -->
+  <main>
+
+    <section class="section">
+      <div class="row">
+
+        <div class="col s12 m12">
+          <div class="white-text card-panel blue darken-2">
+            <center><span class="card-title"><h6>Reporte</h6></span></center>
+          </div>
+        </div>
+        
+        <!--AQUI VA TODO EL CONTENIDO-->
+        <div class="col s1 m1"></div>
+        <div class="col s12 m10">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="vista/config/img/repor.png" style="height: 270px">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+
+                <span class="card-title">Generar Reporte</span>
+                
+                <form class="row" action="?url=reporte&opcion=generar" method="post" target="_blank">
+
+                 <div class="form-group col-lg-3">
+                  <label for="reporte">Reportar:</label>
+                  <select name="reporte" id="reporte" class="form-control">
+
+                    <?php if($identificacionOperador == 'false'){ ?>
+                    <option value="" selected disabled>Seleccione una opcion</option>
+                    <option value="4">Global</option>
+
+                    <?php if($_SESSION['tipo_rol'] == '1'){ ?>
+
+                      <option value="9">Usuarios</option>
+                      <option value="2">Beneficiarios</option>
+                      <option value="3">Operativos</option> 
+
+                    <?php }else{ ?>
+                    <option value="1">Usuarios</option>
+                    <option value="2">Beneficiarios</option>
+                    <option value="3">Operativos</option> 
+                    <?php } } if($identificacionOperador == 'Obrero'){ ?>
+                    <option value="" selected disabled>Seleccione una opcion</option>
+                    <option value="4">Global</option>
+                    <option value="5">Beneficiarios</option>
+                    <option value="3">Operativos</option> 
+                    <?php }if($identificacionOperador == 'Administrativo'){ ?>
+                    <option value="" selected disabled>Seleccione una opcion</option>
+                    <option value="4">Global</option> 
+                    <option value="6">Beneficiarios</option>
+                    <option value="3">Operativos</option> 
+                    <?php }if($identificacionOperador == 'Docente'){ ?>
+                    <option value="" selected disabled>Seleccione una opcion</option>
+                    <option value="4">Global</option>
+                    <option value="7">Beneficiarios</option>
+                    <option value="3">Operativos</option> 
+                    <?php } ?>
+
+                  </select>
+                </div>
+
+                <input type="hidden" id="identificacionOperador" name="identificacionOperador" value="<?php echo $identificacionOperador;?>">
+                <input type="hidden" id="" name="" value="<?php echo $_SESSION['dependencia'];?>">
+
+                <div class="form-group col-lg-3">
+                  <label for="categoria">Categoria:</label>
+                  <select name="categoria" id="categoria" required>
+                  </select>
+                </div>
+
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card-action">
+          <center>
+            <input type="submit" name="aceptar" value="exportar pdf" class="btn btn-primary green darken-2 btn-small">
+          </center>
+        </div>
+
+      </form>
+
+    </div>
+  </section>
+</main>
+<!-- ============================================================== -->
+<!--FIN DEL CONTENIDO-->
+<!-- ============================================================== -->
+
+<!--**********************************************************************************************************************************-->
+
+<!-- ============================================================== -->
+<!--                     IMPORTACION DEL FOOTER                     -->
+<!-- ============================================================== -->
+<?php require_once 'vista/publico/Footer.php'; ?>
+<!-- ============================================================== -->
+<!--               IMPORTACION DE LOS SCRIPTS                       -->
+<!-- ============================================================== -->
+<?php require_once 'vista/publico/Scripts.php'; ?>
+</body>
+</html>
